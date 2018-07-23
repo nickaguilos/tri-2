@@ -40,9 +40,10 @@ a:hover {
 /*  Grid  */
 .container {
 	max-width: 1200px;
-	padding: 0 50px;
+	/*padding: 0 50px;*/
 	margin: 0 auto;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 			
 								  
@@ -116,10 +117,19 @@ a:hover {
 
 /* Header */
 
+#site-header .container {
+	background: #fff;
+}
+
 #site-header a {
 	display: inline-block;
 	font-weight: bold;
 }
+
+/*#site-header nav {
+	padding-left: 50px;
+	padding-right: 50px;
+}*/
 
 #site-header nav>div {
 	padding: 7px 0;
@@ -157,15 +167,19 @@ a:hover {
 #site-header .row-3 a {
 	padding: 13px;
 	font-size: 13px;
-	font-weight: bold;
+	font-weight: normal !important;
 }
 
 /* Main Content */
-#main-content {
+#main-content > div{
 	background-color: #fff;
-	padding-top: 50px;
 	font-size: 13px;
 }
+
+#main-content > * {
+	padding: 0 50px;
+}
+
 
 #main-content p {
 	color: #666;
@@ -193,7 +207,11 @@ a:hover {
 }
 
 .slideshow {
-	margin-bottom: 50px;
+	margin: 50px 0;
+}
+
+.slideshow img {
+	width: 100%;
 }
 
 .news {
@@ -254,3 +272,19 @@ a:hover {
 	width: 80%;
 }
 
+
+.post-footer {
+	font-size: 12px;
+	padding: 20px 0;
+	border-top: 1px solid var(--border-color);
+	margin-top: 20px;
+}
+
+.post-footer div:nth-child(2) {
+	text-align: right;
+}
+
+.post-footer a {
+	display: inline-block;
+	padding: 0 1em;
+}
